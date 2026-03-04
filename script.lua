@@ -5,3 +5,16 @@ game.StarterGui:SetCore("SendNotification", {
     Text = "Berhasil execute!",
     Duration = 5
 })
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TsunamiEvent = ReplicatedStorage:WaitForChild("TsunamiEvent")
+
+local button = script.Parent
+
+button.MouseButton1Click:Connect(function()
+	TsunamiEvent:FireServer()
+end)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Test",
+    Text = "Script berhasil jalan",
+    Duration = 5
+})
