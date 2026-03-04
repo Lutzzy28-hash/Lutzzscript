@@ -7,36 +7,7 @@ game.Players.PlayerAdded:Connect(function(player)
 	Coins.Name = "Coins"
 	Coins.Value = 0
 	Coins.Parent = leaderstats
-end)
-
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Lutzzhub
-    Text = "LutzzXDanzz",
-    Duration = 5
-})
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local TsunamiEvent = ReplicatedStorage:WaitForChild("TsunamiEvent")
-
-local button = script.Parent
-
-button.MouseButton1Click:Connect(function()
-	TsunamiEvent:FireServer()
-end)
-game.StarterGui:SetCore("SendNotification", {
-    Title = "bokep",
-    Text = "LutzzXDanzz",
-    Duration = 5
-})
-while true do
-	task.wait(5) -- cek tiap 5 detik
-	
-	for _, player in pairs(game.Players:GetPlayers()) do
-		autoInfinity(player)
-		autoDivine(player)
-		autoCelestial(player)
-	end
-end
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
+end)local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TsunamiEvent = ReplicatedStorage:WaitForChild("TsunamiEvent")
 
 local COOLDOWN = 15
@@ -63,14 +34,12 @@ TsunamiEvent.OnServerEvent:Connect(function(player)
 	task.delay(COOLDOWN, function()
 		playerCooldown[player] = nil
 	end)
-end)
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
+end)local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TsunamiEvent = ReplicatedStorage:WaitForChild("TsunamiEvent")
 
 script.Parent.MouseButton1Click:Connect(function()
 	TsunamiEvent:FireServer()
-end)
-local brainrotsFolder = workspace:WaitForChild("Brainrots")
+end)local brainrotsFolder = workspace:WaitForChild("Brainrots")
 
 while true do
 	task.wait(10)
@@ -80,8 +49,7 @@ while true do
 		enemy.Parent = brainrotsFolder
 		enemy:MoveTo(Vector3.new(math.random(-20,20),5,math.random(-20,20)))
 	end
-end
-local wavePart = Instance.new("Part")
+endlocal wavePart = Instance.new("Part")
 wavePart.Size = Vector3.new(50,1,50)
 wavePart.Anchored = true
 wavePart.Transparency = 0.5
@@ -89,4 +57,55 @@ wavePart.BrickColor = BrickColor.new("Bright blue")
 wavePart.Position = Vector3.new(0,2,0)
 wavePart.Parent = workspace
 
-game.Debris:AddItem(wavePart, 2)
+game.Debris:AddItem(wavePart, 2)local function autoInfinity(player)
+	local stats = player:FindFirstChild("leaderstats")
+	if not stats then return end
+	
+	local coins = stats:FindFirstChild("Coins")
+	local infinity = stats:FindFirstChild("Infinity")
+	
+	if coins and infinity then
+		if coins.Value >= 1000 then
+			coins.Value = 0
+			infinity.Value += 1
+			print(player.Name .. " naik Infinity!")
+		end
+	end
+endlocal function autoDivine(player)
+	local stats = player.leaderstats
+	if stats.Infinity.Value >= 10 then
+		stats.Infinity.Value = 0
+		stats.Divine.Value += 1
+	end
+end
+
+local function autoCelestial(player)
+	local stats = player.leaderstats
+	if stats.Divine.Value >= 5 then
+		stats.Divine.Value = 0
+		stats.Celestial.Value += 1
+	end
+endif currentWave % 10 == 0 then
+	local boss = game.ServerStorage.BossBrainrot:Clone()
+	boss.Parent = workspace.Brainrots
+	boss.Humanoid.MaxHealth = 1000 + (currentWave * 100)
+	boss.Humanoid.Health = boss.Humanoid.MaxHealth
+	print("Boss Spawned!")
+else
+	for i = 1, 5 do
+		local enemy = game.ServerStorage.BrainrotTemplate:Clone()
+		enemy.Parent = workspace.Brainrots
+	end
+end
+
+currentWave += 1local modeGood = Instance.new("BoolValue")
+modeGood.Name = "ModeGood"
+modeGood.Value = true
+modeGood.Parent = playerwhile true do
+	task.wait(5)
+	for _, player in pairs(game.Players:GetPlayers()) do
+		autoInfinity(player)
+		autoDivine(player)
+		autoCelestial(player)
+	end
+		end
