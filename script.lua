@@ -1,9 +1,7 @@
---[[ 
-  Nama Script: Lutzzscript
-  Versi: 1.0
-  Deskripsi: Script untuk [tujuan script]
-  Author: Lutzzy28
-  Tanggal: [Tanggal]
---]]
+print("Script berhasil dimuat!")
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Lutzzy28-hash/Lutzzscript/main/script.lua"))()
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Test Script",
+    Text = "Berhasil execute!",
+    Duration = 5
+})
