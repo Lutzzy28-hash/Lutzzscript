@@ -109,3 +109,4 @@ modeGood.Parent = playerwhile true do
 		autoCelestial(player)
 	end
 		end
+		
